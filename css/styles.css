@@ -1,0 +1,660 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	color: #DADADA;
+	overflow-x: hidden;
+	background-color: #171717;
+	font-family: 'Montserrat-Regular', sans-serif;
+}
+
+nav {
+	position: fixed;
+	left: 0;
+	right: 0;
+	opacity: 0.9;
+	overflow: hidden;
+	z-index: 9999;
+	padding: 8px;
+	background-color: #171717;
+}
+
+nav a {
+	float: left;
+	display: block;
+	font-size: 15px;
+	color: #DADADA;
+	text-align: center;
+	padding: 5px 5px;
+	text-decoration: none;
+}
+
+nav a.menu-navbar:hover {
+	color: #D50000;
+}
+
+img {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;	
+}
+
+.container {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+
+span.greeting {
+	font-family: 'Montserrat-Thin', sans-serif;
+}
+
+span.name {
+	font-family: 'Montserrat-Bold', sans-serif;
+}
+
+span.profession::before {
+	content: 'A ';
+	font-family: 'Montserrat-SemiBold', sans-serif;
+}
+
+span.profession {
+	font-family: 'Montserrat-Thin', sans-serif;
+}
+
+.about-me-text span {
+	font-family: 'Montserrat-BoldItalic', sans-serif;
+}
+
+section.about-me, section.projects, section.contact {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	position: relative;
+	align-items: center;
+	margin-bottom: 80px;
+	justify-content: center;
+	flex-direction: column;
+}
+
+section.contact {
+	margin-bottom: 20px;
+}
+
+.wrapper-contact a:hover {
+	text-decoration: underline;
+}
+
+/* for extra small devices (phones generally) */
+@media screen and (max-width: 575px) {
+
+	nav span.logo img {
+		width: 130px;
+		cursor: pointer;
+		margin: auto 5px;
+		margin-left: 10px;
+	}
+
+	nav a.menu-navbar {
+		display: none;
+	}
+
+	.open-nav {
+		float: right;
+		color: #D50000;
+		display: block;
+		font-size: 20px;
+		margin: 2px 10px;
+		cursor: pointer;
+	}
+
+	.close-nav {
+		color: #D50000;
+		font-size: 25px;
+		margin-top: 50px;
+		display: block;
+		cursor: pointer;
+	}
+
+	.overlay {
+		height: 0;
+		width: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 999;
+		overflow: hidden;
+		background-color:  #171717;
+	}
+
+	.overlay-content {
+		position: relative;
+		top: 25%;
+		width: 100%;
+		opacity: 0;
+		text-align: center;
+		padding: 0;
+		margin-top: 30px;
+		box-sizing: inherit;
+	}
+
+	.overlay a {
+		font-size: 20px;
+		line-height: 1.5;
+		color: #DADADA;
+		display: block;
+		padding: 8px;
+		letter-spacing: 2px;
+		font-family: 'Montserrat-Bold', sans-serif;
+		text-decoration: none;
+	}
+
+	.overlay a:hover {
+		color: #D50000;
+	}
+
+	.header {
+		position: relative;
+		height: 100vh;
+	}
+
+	.wrapper-heading {
+		position: absolute;
+		top: 10%;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0 20px;
+		background-image: url(../assets/img/logo-background.png);
+		background-position: 20vw 0;
+		background-size: 450px auto;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+	}
+
+	.wrapper-heading h1 {
+		line-height: 1.5;
+		font-size: 28px;
+		margin-top: 80px;
+		text-align: left;
+	}
+
+	span.profession {
+		font-size: 20px;
+	}
+
+	.arrow-down {
+		position: absolute;
+		bottom: 20%;
+		left: 48%;
+		color: #D50000;
+		font-size: 30px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.heading-title {
+		letter-spacing: 1px;
+		color: #D50000;
+		font-size: 25px;
+		margin-bottom: 8px;
+		text-align: center;
+		font-family: 'Montserrat-Medium', sans-serif;
+	}
+
+	.wrapper-about {
+		padding: 0 20px;
+	}
+
+	.about-me-text {
+		margin-top: 10px;
+	}
+
+	.skills h2 {
+		font-size: 20px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.skills p {
+		text-align: center;
+		color: #D50000;
+		margin: 0 8px;
+		font-family: 'Montserrat-SemiBold', sans-serif;
+	}
+
+	.wrapper-projects {
+		width: 85%;
+	}
+
+	.project-card {
+		width: 100%;
+		height: auto;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 30px;
+		background-color: white;
+	}
+
+	.project-card .thumbnail img {
+		width: 100%;
+		height: 260px;
+		overflow: hidden;
+		background-size: cover;
+	}
+
+	.project-desc-box {
+		text-align: center;
+		padding: 15px 20px;
+		max-height: 150px;
+	}
+
+	.project-desc-box .title-project {
+		color: black;
+		font-size: 22px;
+		font-family: 'Montserrat-SemiBold', sans-serif;
+	}
+
+	.project-desc-box .desc-project {
+		color: black;
+		padding-top: 8px;
+		text-align: left;
+	}
+
+	.project-card .button-card {
+		padding-bottom: 15px;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.project-card .button-card a {
+		color: white;
+		width: 100px;
+		font-size: 12px;
+		text-align: center;
+		padding: 10px 15px;
+		border-radius: 50px;
+		background-color: #D50000;
+		text-decoration: none;
+	}
+
+	.wrapper-contact a {
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		font-family: 'Montserrat-SemiBold', sans-serif;
+	}
+
+	.wrapper-contact p {
+		text-align: center;
+	}
+
+	.wrapper-contact .icon-social {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.icon-social a {
+		font-size: 25px;
+		padding: 2px;
+		transform: rotate(0deg) scale(1,1);
+		transition: 0.5s;
+	}
+
+	.icon-social a:hover {
+		transform: rotate(360deg) scale(1.2,1.2);
+		color: #D50000;
+	}
+
+	.footer .wrapper-logo-bottom {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 10px;
+	}
+
+	.footer img {
+		width: 80px;
+		height: auto;
+	}
+
+	.footer p {
+		font-size: 10px;
+		font-family: 'Montserrat-Bold', sans-serif;
+	}
+}
+
+
+/* for small devices (large phones, potrait tablets) */
+@media screen and (min-width: 576px) {
+
+	nav span.logo img {
+		width: 150px;
+		margin: auto 5px;
+		margin-left: 15px;
+	}
+
+	nav a.menu-navbar {
+		float: right;
+		font-size: 15px;
+		padding: 5px 0;
+		margin: 5px 10px;
+		transition: 0.4s;
+		font-family: 'Montserrat-Bold', sans-serif;
+	}
+	
+	.open-nav {
+		display: none;
+	}
+
+	#mobileNav {
+		display: none;
+	}
+
+	.header {
+		position: relative;
+		height: 100vh;
+	}
+
+	.wrapper-heading {
+		position: absolute;
+		top: 10%;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0 20px;
+		background-image: url(../assets/img/logo-background.png);
+		background-position: 30vw 0;
+		background-size: 600px auto;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+	}
+
+	.wrapper-heading h1 {
+		line-height: 1.5;
+		font-size: 40px;
+		margin-top: 80px;
+		margin-left: 30px;
+		text-align: left;
+	}
+
+	span.name {
+		color: #D50000;
+	}
+
+	span.profession {
+		font-size: 25px;
+	}
+
+	.arrow-down {
+		position: absolute;
+		bottom: 15%;
+		left: 48%;
+		color: #D50000;
+		font-size: 30px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.heading-title {
+		letter-spacing: 1px;
+		color: #D50000;
+		font-size: 25px;
+		margin-bottom: 8px;
+		text-align: center;
+		font-family: 'Montserrat-Medium', sans-serif;
+	}
+
+	.wrapper-about {
+		padding: 0 50px;
+	}
+
+	.about-me-text {
+		margin-top: 20px;
+	}
+
+	.skills h2 {
+		font-size: 20px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.skills p {
+		text-align: center;
+		color: #D50000;
+		margin: 0 8px;
+		font-family: 'Montserrat-SemiBold', sans-serif;
+	}
+
+	.wrapper-projects {
+		width: 60%;
+	}
+
+	.project-card {
+		width: 100%;
+		height: auto;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 30px;
+		background-color: white;
+	}
+
+	.project-card .thumbnail img {
+		width: 100%;
+		height: 260px;
+		overflow: hidden;
+		background-size: cover;
+	}
+
+	.project-desc-box {
+		text-align: center;
+		padding: 15px 20px;
+		max-height: 150px;
+	}
+
+	.project-desc-box .title-project {
+		color: black;
+		font-size: 22px;
+		font-family: 'Montserrat-SemiBold', sans-serif;
+	}
+
+	.project-desc-box .desc-project {
+		color: black;
+		padding-top: 8px;
+		text-align: left;
+	}
+
+	.project-card .button-card {
+		padding-bottom: 15px;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.project-card .button-card a {
+		color: white;
+		width: 100px;
+		font-size: 12px;
+		text-align: center;
+		padding: 10px 15px;
+		border-radius: 50px;
+		background-color: #D50000;
+		text-decoration: none;
+	}
+
+	.wrapper-contact a {
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		font-family: 'Montserrat-SemiBold', sans-serif;
+	}
+
+	.wrapper-contact p {
+		text-align: center;
+	}
+
+	.wrapper-contact .icon-social {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.icon-social a {
+		font-size: 25px;
+		padding: 2px;
+		transform: rotate(0deg) scale(1,1);
+		transition: 0.5s;
+	}
+
+	.icon-social a:hover {
+		transform: rotate(360deg) scale(1.2,1.2);
+		color: #D50000;
+	}
+
+	.footer .wrapper-logo-bottom {
+		display: flex;
+		justify-content: center;
+		margin: 10px 0;
+	}
+
+	.footer img {
+		width: 80px;
+		height: auto;
+	}
+
+	.footer p {
+		font-size: 10px;
+		font-family: 'Montserrat-Bold', sans-serif;
+	}
+
+}
+
+
+/* for medium devices (lanscape tablets) */
+@media screen and (min-width: 768px) {
+
+	nav span.logo img {
+		width: 150px;
+		margin: auto 5px;
+		margin-left: 15px;
+	}
+
+	nav a.menu-navbar {
+		float: right;
+		font-size: 15px;
+		padding: 5px 0;
+		margin-right: 40px;
+	}
+
+	.header {
+		position: relative;
+		height: 100vh;
+		margin-bottom: 40px;
+	}
+
+	.wrapper-heading {
+		position: absolute;
+		top: 10%;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0 20px;
+		background-image: url(../assets/img/logo-background.png);
+		background-position: 45vw 0;
+		background-size: 600px auto;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+	}
+
+	.arrow-down {
+		position: absolute;
+		bottom: 15%;
+		left: 48%;
+		color: #D50000;
+		font-size: 30px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.wrapper-about {
+		padding: 0 70px;
+	}
+
+	.wrapper-projects {
+		width: 90%;
+	}
+
+	.wrapper-projects .project-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.project-card {
+		width: 45%;
+		height: auto;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 35px;
+		background-color: white;
+	}
+
+}
+
+
+/* for large devices (laptops/desktop) */
+@media screen and (min-width: 992px) {
+
+	nav a.menu-navbar {
+		font-size: 18px;
+	}
+
+	.wrapper-heading {
+		top: 5%;
+		background-image: url(../assets/img/logo-background.png);
+		background-position: 55vw 0;
+		background-size: 650px auto;
+	}
+
+	.wrapper-heading h1 {
+		font-size: 60px;
+		margin-top: 80px;
+		margin-left: 80px;
+	}
+
+	span.profession {
+		font-size: 35px;
+	}
+
+	.arrow-down {
+		bottom: 10%;
+	}
+
+	.wrapper-about {
+		padding: 0 80px;
+	}
+
+	.wrapper-projects {
+		width: 95%;
+	}
+
+	.project-card {
+		width: 30%;
+	}
+
+}
+
+
+/* for extra large devices (large laptop, desktop) */
+@media screen and (min-width: 1200px) {
+
+	.wrapper-projects {
+		width: 90%;
+	}
+
+}
