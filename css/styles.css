@@ -249,6 +249,12 @@ section.contact {
 		background-size: cover;
 	}
 
+	.project-card .thumbnail video {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+	}
+
 	.project-desc-box {
 		text-align: center;
 		padding: 15px 20px;
@@ -450,6 +456,12 @@ section.contact {
 		height: 260px;
 		overflow: hidden;
 		background-size: cover;
+	}
+
+	.project-card .thumbnail video {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
 	}
 
 	.project-desc-box {
