@@ -21,11 +21,21 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EY5NCSV2MV"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+	
+	// calculate age
+	function calculate_age(get_age) { 
+    	var diff_ms = Date.now() - get_age.getTime();
+    	var age_dt = new Date(diff_ms); 
+  
+    	return Math.abs(age_dt.getUTCFullYear() - 1970);
+	}
 
-	  gtag('config', 'G-EY5NCSV2MV');
+	// google analytics script
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-EY5NCSV2MV');
 	</script>
 </head>
 <body>
@@ -63,7 +73,7 @@
 			<div class="wrapper-heading">
 				<h1>
 					<span class="greeting">Hi there👋, <br> I'm </span>
-					<span class="name">Avirahman</span> <br>
+					<span class="name">Avi</span><br>
 					<span class="profession"></span> 
 				</h1>
 				<a class="page-scroll" href="#about">
@@ -80,8 +90,8 @@
 				<h1 class="heading-title">ABOUT ME</h1>
 
 				<div class="about-me-text">
-					<p>I'm <span>Avirur Rahman</span>, a 16 years old self-taught <span>Web</span> Developer & <span>Game</span> Developer, from <span>Indonesia</span>.</p><br>
-					<p>currently I'm vocational high school in <span>Multimedia</span>, I have been coding for almost 3 years.</p><br>
+					<p>I'm <span>Avirur Rahman</span>, a <script>document.write(calculate_age(new Date(2004, 6)));</script> years old self-taught <span>Web</span> Developer & <span>Game</span> Developer, from <span>Indonesia</span>.</p><br>
+					<p>currently I'm vocational high school in <span>Multimedia</span>, I have been coding for almost 4 years.</p><br>
 					<p>I always want to <span>learn more</span>, and <span>do more</span> which can be useful for other people or just for fun, you can check my projects on below.</p>
 				</div>
 				<br><br>
@@ -109,19 +119,29 @@
 			<div class="wrapper-contact">
 				<h1 class="heading-title">CONTACT ME</h1>
 				<br>
-				<a href="mailto:avirahmandev@gmail.com">avirahmandev@gmail.com</a>
+				<a href="mailto:contact.avirahmandev@gmail.com">contact.avirahmandev@gmail.com</a>
 				<br><br>
-				<p>Also follow me on:</p>
+				<p>Also visit me on:</p>
 				<br>
 				<div class="icon-social">
 					<!-- github -->
 					<a href="https://github.com/avirahmandev" target="_blank">
 						<i class="fab fa-github"></i>
 					</a>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
 					<!-- instagram -->
 					<a href="https://instagram.com/avirahman.dev" target="_blank">
 						<i class="fab fa-instagram"></i>
+					</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<!-- twitter -->
+					<a href="https://twitter.com/avirahmandev" target="_blank">
+						<i class="fab fa-twitter"></i>
+					</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<!-- itch io -->
+					<a href="https://avirahmandev.itch.io" target="_blank">
+						<i class="fab fa-itch-io"></i>
 					</a>
 				</div>
 				<br><br>
@@ -129,7 +149,7 @@
 					<span class="wrapper-logo-bottom">
 						<img src="assets/img/logo-background.png">
 					</span>
-					<p class="copyright">COPYRIGHT © 2021, AVIRAHMAN</p>
+					<p class="copyright">COPYRIGHT © <script>document.write(new Date().getFullYear());</script>, AVIRAHMAN</p>
 				</div>
 			</div>
 		</section>
