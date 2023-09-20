@@ -21,27 +21,28 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EY5NCSV2MV"></script>
 	<script>
-	
-	// calculate age
-	function calculate_age(get_age) { 
-    	var diff_ms = Date.now() - get_age.getTime();
-    	var age_dt = new Date(diff_ms); 
-  
-    	return Math.abs(age_dt.getUTCFullYear() - 1970);
-	}
+		// google analytics script
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-	// google analytics script
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+		gtag('config', 'G-EY5NCSV2MV');
 
-	gtag('config', 'G-EY5NCSV2MV');
+		// calculate age
+		function calculate_age(get_age) { 
+	    	var diff_ms = Date.now() - get_age.getTime();
+	    	var age_dt = new Date(diff_ms); 
+	  
+	    	return Math.abs(age_dt.getUTCFullYear() - 1970);
+		}
 	</script>
 </head>
 <body>
 	<nav class="navbar" id="navbar">
-		<span class="logo page-scroll" href="#home">
-			<img src="assets/img/avirahman-logo.png">
+		<span class="logo">
+			<a class="page-scroll" href="#home">
+				<img src="assets/img/avirahman-logo.png" alt="logo Avirahman">
+			</a>
 		</span>
 
 		<!-- desktop navbar -->
@@ -88,16 +89,15 @@
 
 			<div class="wrapper-about">
 				<h1 class="heading-title">ABOUT ME</h1>
-
 				<div class="about-me-text">
 					<p>I'm <span>Avirur Rahman</span>, a <script>document.write(calculate_age(new Date(2004, 6)));</script> years old self-taught <span>Web</span> Developer & <span>Game</span> Developer, from <span>Indonesia</span>.</p><br>
-					<p>currently I'm vocational high school in <span>Multimedia</span>, I have been coding for almost 4 years.</p><br>
-					<p>I always want to <span>learn more</span>, and <span>do more</span> which can be useful for other people or just for fun, you can check my projects on below.</p>
+					<p>I have a background in <span>Multimedia</span>, I like <span>photography</span>, and <span>videography</span>. Also I have been coding for almost 5 years, make apps and games.</p><br>
+					<p>Outside that, I enjoy reading books gaining new knowledge other than programming. I always want to <span>learn more</span>, and <span>do more</span>.</p>
 				</div>
 				<br><br>
 				<div class="skills">
 					<h2>My Languages & Technologies</h2>
-					<p>HTML - CSS - JAVASCRIPT - PHP - C++ - MYSQL - ARDUINO - GODOT ENGINE - GDSCRIPT</p>
+					<p>HTML - CSS - JAVASCRIPT - PHP - MYSQL - ARDUINO - GODOT ENGINE - GDSCRIPT</p>
 				</div>
 			</div>
 
@@ -143,11 +143,16 @@
 					<a href="https://avirahmandev.itch.io" target="_blank">
 						<i class="fab fa-itch-io"></i>
 					</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<!-- play store -->
+					<a href="https://play.google.com/store/apps/dev?id=8350784729080145521" target="_blank">
+						<i class="fab fa-google-play"></i>
+					</a>
 				</div>
 				<br><br>
 				<div class="footer">
 					<span class="wrapper-logo-bottom">
-						<img src="assets/img/logo-background.png">
+						<img src="assets/img/logo-background.png" alt="logo background">
 					</span>
 					<p class="copyright">COPYRIGHT © <script>document.write(new Date().getFullYear());</script>, AVIRAHMAN</p>
 				</div>

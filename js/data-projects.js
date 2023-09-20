@@ -1,14 +1,24 @@
 var projects = [
-
+	
 	{
 		haveLivePrev: true,
 		haveSourceCode: false,
 		haveVideoPrev: true,
-		title: "Cube Platformer 2D",
-		description:"2D basic platformer game made with Godot Engine",
-		thumbnail: "assets/video/Preview-cube-platformer.webm",
+		title: "Cube Knight Adventure",
+		description:"Cube Knight Adventure is a 2D platformer adventure game made with GDscript and Godot Engine.",
+		thumbnail: "assets/video/preview-cube-knight-adventure.webm",
 		githubLink: "javascript:void(0)",
-		liveUrl: "https://drive.google.com/file/d/1Cz-1Xf6VoCl4sZr9rffjgIDBPZhGgoiG/view?usp=sharing"
+		liveUrl: "https://play.google.com/store/apps/details?id=com.avirahmandev.CubeKnightAdventure"
+	},
+	{
+		haveLivePrev: false,
+		haveSourceCode: false,
+		haveVideoPrev: true,
+		title: "Cube Platformer 2D",
+		description:"My first 2D basic platformer game made with Godot Engine",
+		thumbnail: "assets/video/preview-cube-platformer.webm",
+		githubLink: "javascript:void(0)",
+		liveUrl: "javascript:void(0)"
 	},
 	{
 		haveLivePrev: true,
@@ -19,17 +29,17 @@ var projects = [
 		thumbnail: "assets/img/todo-app-thumbnail.png",
 		githubLink: "https://github.com/avirahmandev/todo-app",
 		liveUrl: "https://avirahmandev.github.io/todo-app/"
-	},
-	{
-		haveLivePrev: false,
-		haveSourceCode: true,
-		haveVideoPrev: true,
-		title: "Walking LED",
-		description: "A simple walking LED using Arduino, written in C++",
-		thumbnail: "assets/video/Preview-walking-led.webm",
-		githubLink: "https://github.com/avirahmandev/walking-led",
-		liveUrl: "javascript:void(0)"
 	}
+	// {
+	// 	haveLivePrev: false,
+	// 	haveSourceCode: true,
+	// 	haveVideoPrev: true,
+	// 	title: "Walking LED",
+	// 	description: "A simple walking LED using Arduino, written in C++",
+	// 	thumbnail: "assets/video/preview-walking-led.webm",
+	// 	githubLink: "https://github.com/avirahmandev/walking-led",
+	// 	liveUrl: "javascript:void(0)"
+	// }
 
 ];
 
@@ -54,7 +64,7 @@ function generateProjects() {
 		var headWithImg = `
 			<div class="project-card">
 				<div class="thumbnail">
-					<img src="${projects[i].thumbnail}">
+					<img src="${projects[i].thumbnail}" alt="thumbnail">
 				</div>
 			`;
 
@@ -70,7 +80,7 @@ function generateProjects() {
 
 		var footerNormal = `
 				<div class="button-card">
-					<a href="${projects[i].liveUrl}"><i class="fas fa-link"></i> VISIT</a>
+					<a href="${projects[i].liveUrl}" target="_blank"><i class="fas fa-link"></i> VISIT</a>
 					<a href="${projects[i].githubLink}" target="_blank"><i class="fab fa-github"></i> SOURCE</a>
 				</div>
 			</div>
@@ -86,7 +96,15 @@ function generateProjects() {
 
 		var footerBtn2Disabled = `
 				<div class="button-card">
-					<a href="${projects[i].liveUrl}"><i class="fas fa-link"></i> VISIT</a>
+					<a href="${projects[i].liveUrl}" target="_blank"><i class="fas fa-link"></i> VISIT</a>
+					<a href="${projects[i].githubLink}" style="opacity: 0.5;"><i class="fab fa-github"></i> SOURCE</a>
+				</div>
+			</div>
+			`;
+
+		var footerBtnBothDisabled = `
+				<div class="button-card">
+					<a href="${projects[i].liveUrl}" style="opacity: 0.5;"><i class="fas fa-link"></i> VISIT</a>
 					<a href="${projects[i].githubLink}" style="opacity: 0.5;"><i class="fab fa-github"></i> SOURCE</a>
 				</div>
 			</div>
@@ -108,6 +126,9 @@ function generateProjects() {
 		} else if (projects[i].haveLivePrev && !projects[i].haveSourceCode) {
 			
 			itemProject += footerBtn2Disabled;
+		} else if (!projects[i].haveLivePrev && !projects[i].haveSourceCode) {
+			
+			itemProject += footerBtnBothDisabled;
 		} else {
 			
 			itemProject += footerNormal;
